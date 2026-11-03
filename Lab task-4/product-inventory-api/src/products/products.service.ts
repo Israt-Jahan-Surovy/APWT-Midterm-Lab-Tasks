@@ -13,7 +13,7 @@ export class ProductsService {
 
 
            async create(dto:CreateProductDto){
-        const product = this.productsRepository.create(dto); //no await needed cz 'create' on typeorm is synchronous
+        const product = this.productsRepository.create(dto); 
         const savedProduct= await this.productsRepository.save(product);
 
         return{
